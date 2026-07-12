@@ -42,17 +42,9 @@ MakeLOD is a batch LOD generator for Static Meshes. It replaces Unreal Engine's 
 
 ## 2. Installation
 
-1. Copy the `MakeLOD` folder into your project's `Plugins/` directory or download it from [FAB](https://www.fab.com/listings/82c66f87-985e-4d05-96b2-799754196368).
-   ```
-   MyProject/
-   └── Plugins/
-       └── MakeLOD/
-           ├── MakeLOD.uplugin
-           └── Source/
-   ```
-2. Right-click your `.uproject` file → **Generate Visual Studio project files**.
-3. Open the project — UE will prompt to compile the plugin. Click **Yes**.
-4. After compilation, go to **Edit → Plugins**, search for `MakeLOD`, and make sure it is enabled.
+1. Right-click your `.uproject` file → **Generate Visual Studio project files**.
+2. Open the project — UE will prompt to compile the plugin. Click **Yes**.
+3. After compilation, go to **Edit → Plugins**, search for `MakeLOD`, and make sure it is enabled.
 
 > **Requirements:** Unreal Engine 5.3 or later. The plugin is editor-only and adds zero runtime overhead to your shipped game. The **Modeling Tools** method additionally requires the `GeometryScripting` plugin to be enabled (the `MakeLOD.uplugin` declares this dependency automatically — no manual step needed).
 
@@ -68,46 +60,7 @@ The panel docks like any other UE tab — drag it next to your Content Browser, 
 ---
 
 ## 4. Interface Overview
-
-```
-┌─ LOD Method ────────────────────────────────────────────────────┐
-│  [Auto Redux]  [Seamless Redux]                                  │
-│  [KDux]                                                          │
-│  [Modeling Tools (GeometryScript)]                               │
-├─ KDux Settings (visible when KDux selected) ────────────────────┤
-│  LOD1: Hard Angle [30°]  UV Seams [x]  Mat Bounds [x]           │
-│        Aggressiveness [0.5]                                      │
-│  LOD2: ...                                                       │
-├─ Modeling Tools Settings (visible when Modeling Tools selected) ─┤
-│  LOD1: Algorithm [Attribute Aware ▾]                             │
-│        [x] Allow Seam Collapse  [x] Preserve Vertex Positions    │
-│        [x] Allow Seam Smoothing [x] Allow Seam Splits            │
-│  LOD2: ...                                                       │
-├─ LOD Presets ───────────────────────────────────────────────────┤
-│  [2x]  [Grad]  [D2]                                              │
-│  [D3]  [Perf]  [Qual]                                            │
-│  [↓ Fill Levels]                                                 │
-├─ LOD Levels ────────────────────────────────────────────────────┤
-│  #   ScreenSize  Tri%    MaxDev   Est.Tris                       │
-│  1   [0.50]      [0.500] [0]      ~18 000                        │
-│  2   [0.20]      [0.250] [0]      ~9 000                         │
-│  3   [0.08]      [0.125] [0]      ~4 500                         │
-│  4   [0.02]      [0.001] [0]      ~36                            │
-│  [+ Add LOD Level]               [- Remove Last]                 │
-├─ Options ───────────────────────────────────────────────────────┤
-│  [x] Preserve UVs            [x] Preserve Materials              │
-│  [x] Preserve Vertex Colors  [x] Lock Border Verts               │
-│  [ ] Recompute Normals       [x] Recompute Tangents              │
-├─ Selected Meshes ───────────────────────────────────────────────┤
-│  [↺ Refresh from Selection]                                      │
-│  SM_Wall    LOD0: 4 800 tris  |  Current LODs: 1                 │
-│  SM_Floor   LOD0: 2 048 tris  |  Current LODs: 3                 │
-├─────────────────────────────────────────────────────────────────┤
-│  [▶ Generate LODs for Selected Meshes]                           │
-│  [▶▶ Generate LODs for ALL Meshes in Project]                    │
-└─────────────────────────────────────────────────────────────────┘
-```
-
+Images here: https://www.fab.com/listings/f283df66-49f4-491c-bc1d-c2e45c8e7ff6 [https://www.fab.com/listings/f283df66-49f4-491c-bc1d-c2e45c8e7ff6]
 ---
 
 ## 5. LOD Methods
