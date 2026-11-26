@@ -71,7 +71,9 @@ Both tabs dock like any other UE tab. Drag them next to your Content Browser, De
 ---
 
 ## 4. Interface Overview
-Images here: https://www.fab.com/listings/f283df66-49f4-491c-bc1d-c2e45c8e7ff6
+
+Screenshots of the panel and the window are on the [Fab listing](https://www.fab.com/listings/f283df66-49f4-491c-bc1d-c2e45c8e7ff6).
+
 
 ---
 
